@@ -1,0 +1,8 @@
+- hosts: test
+  remote_user: root
+  gather_facts: false
+
+  tasks:
+        - name: Upload the BIOS Update for Dell FC630 from a remote NFS share and apply with reboot
+#          raw: "racadm update -f BIOS_DH7R1_WN64_2.4.2.EXE -l 10.105.162.10:/mnt/kickstart/tmp --reboot"
+          raw: "racadm update -f BIOS_DH7R1_WN64_2.4.2.EXE -l 10.105.162.10:/mnt/kickstart/tmp"
